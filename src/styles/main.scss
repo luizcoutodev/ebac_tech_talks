@@ -1,5 +1,26 @@
 // parcel funciona como um programa que distribui para a pasta dist
+@use 'hero';
 
-body {
-    background-color: green;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: #ffff;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    // para que fique acima do pseudo elemento criado, o overlay do hero.
+
+    @media (max-width: 640px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 1024px){
+        max-width: 90%;
+    }
 }
