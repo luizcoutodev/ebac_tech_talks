@@ -1,5 +1,8 @@
 // parcel funciona como um programa que distribui para a pasta dist
 @use 'hero';
+@use 'components/infos_bar';
+@use 'components/buttons';
+@use 'event';
 
 * {
     margin: 0;
@@ -7,6 +10,7 @@
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     color: #ffff;
+    list-style: none;
 }
 
 .container {
