@@ -1,6 +1,6 @@
 AOS.init();
 
-const eventTime = new Date("Dec 10, 2023 20:00:00");
+const eventTime = new Date("Dec 17, 2023 20:00:00");
 const eventTimeStamp = eventTime.getTime();
 
 const dateCount = setInterval(function(){
@@ -21,7 +21,7 @@ const dateCount = setInterval(function(){
     const counter = document.getElementById('counter');
     counter.innerHTML = `começa em ${daysUntilEvent}d ${hoursUntilEvent}h ${minutesUntilEvent}m ${secondsUntilEvent}s`;
 
-    if (actualTimeStamp < 0) {
+    if (actualTimeStamp > eventTimeStamp) {
         clearInterval(dateCount);
         counter.innerHTML = "O EVENTO FOI FINALIZADO"
     }
