@@ -21,7 +21,7 @@ const dateCount = setInterval(function(){
     const counter = document.getElementById('counter');
     counter.innerHTML = `começa em ${daysUntilEvent}d ${hoursUntilEvent}h ${minutesUntilEvent}m ${secondsUntilEvent}s`;
 
-    if (actualTimeStamp > eventTimeStamp) {
+    if (actualTimeStamp < 0) {
         clearInterval(dateCount);
         counter.innerHTML = "O EVENTO FOI FINALIZADO"
     }
